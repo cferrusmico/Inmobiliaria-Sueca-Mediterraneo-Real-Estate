@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mediterraneorealestate.netlify.app/sitemap.xml
+Sitemap: https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/sitemap.xml
