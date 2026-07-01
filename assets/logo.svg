@@ -1,0 +1,19 @@
+<svg width="340" height="72" viewBox="0 0 340 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mediterr�neo Real Estate">
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="340" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E2A35"/>
+      <stop offset="1" stop-color="#0F6F8A"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="339" height="71" rx="14" fill="#FFFFFF" stroke="rgba(30,42,53,0.12)"/>
+  <g transform="translate(18 14)">
+    <path d="M0 22C9 10 22 5 38 5C54 5 68 12 78 22C86 30 95 34 106 34C118 34 128 29 140 18" stroke="url(#sea)" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M0 34C9 22 22 17 38 17C54 17 68 24 78 34C86 42 95 46 106 46C118 46 128 41 140 30" stroke="rgba(15,111,138,0.35)" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="150" cy="18" r="6" fill="#D9C7A0"/>
+  </g>
+  <g transform="translate(180 20)">
+    <text x="0" y="18" font-family="Georgia, serif" font-size="18" font-weight="600" fill="#1E2A35" letter-spacing="0.08em">MEDITERR�NEO</text>
+    <text x="0" y="42" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="rgba(30,42,53,0.78)" letter-spacing="0.24em">REAL ESTATE � SUECA</text>
+  </g>
+</svg>
+
