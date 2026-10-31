@@ -3,12 +3,36 @@
 function initNav() {
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('nav-main');
+  const header = document.querySelector('.site-header');
   if (!toggle || !nav) return;
 
-  toggle.addEventListener('click', () => nav.classList.toggle('is-open'));
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('is-open');
+    if (header && nav.classList.contains('is-open')) header.classList.add('is-solid');
+  });
   nav.querySelectorAll('a').forEach((a) => {
     a.addEventListener('click', () => nav.classList.remove('is-open'));
   });
+}
+
+function initHeaderTheme() {
+  const header = document.querySelector('.site-header');
+  const hero = document.getElementById('inicio');
+  if (!header) return;
+  if (!hero || document.body.classList.contains('page-inner')) {
+    header.classList.add('is-solid');
+    return;
+  }
+
+  const update = () => {
+    const nav = document.getElementById('nav-main');
+    const pastHero = window.scrollY > Math.max(hero.offsetHeight - 72, 40);
+    header.classList.toggle('is-solid', pastHero || Boolean(nav && nav.classList.contains('is-open')));
+  };
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
 }
 
 function initSmoothScroll() {
@@ -190,6 +214,7 @@ function initGAEvents() {
 
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
+  initHeaderTheme();
   initSmoothScroll();
   initReveal();
   initContactForms();

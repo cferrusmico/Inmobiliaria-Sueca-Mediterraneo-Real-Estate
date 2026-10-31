@@ -25,7 +25,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <!-- Structured data for SEO (LocalBusiness) -->
   <script type="application/ld+json">
@@ -68,30 +68,36 @@
         <a href="#sobre">Sobre nosotros</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">☰</button>
+      <div class="header-actions">
+        <a href="#contacto" class="btn btn-light header-cta" data-ga-event="cta_header" data-ga-label="contacto">Contacto</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">☰</button>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="hero hero-with-bg" id="inicio">
-      <div class="container">
+      <div class="hero-copy">
         <h1>Comprar o vender, sin complicaciones</h1>
         <p class="subtitle">Hacemos que encontrar tu hogar ideal sea fácil, transparente y sin complicaciones.</p>
-        <div class="hero-actions">
-          <a href="#contacto" class="btn btn-primary" data-ga-event="cta_hero" data-ga-label="contacto">Contacto</a>
-        </div>
+        <a href="#contacto" class="btn btn-light" data-ga-event="cta_hero" data-ga-label="contacto">Contacto →</a>
       </div>
     </section>
 
-    <section class="section section-compact section-alt" id="propiedades">
+    <section class="section section-propiedades" id="propiedades">
       <div class="container">
         <h2 class="section-title reveal">Ver propiedades</h2>
-        <div class="platform-grid reveal">
-          <a href="https://www.idealista.com/pro/mediterraneo-real-estate/" class="platform-btn" target="_blank" rel="noopener noreferrer" aria-label="Ver propiedades en Idealista" data-ga-event="cta_platform" data-ga-label="idealista">
-            <img src="assets/platforms/idealista.png" alt="Idealista">
+        <p class="section-subtitle reveal">Descubre nuestras viviendas disponibles en Idealista e Instagram.</p>
+        <div class="prop-cards reveal">
+          <a href="https://www.idealista.com/pro/mediterraneo-real-estate/" class="prop-card prop-card--exterior" target="_blank" rel="noopener noreferrer" data-ga-event="cta_platform" data-ga-label="idealista">
+            <h3>Idealista</h3>
+            <p>Consulta todas las viviendas en venta y alquiler en nuestro perfil de Idealista.</p>
+            <span class="btn btn-primary">Ver en Idealista →</span>
           </a>
-          <a href="https://www.instagram.com/inmobiliaria.mediterraneo?igsh=MXF5ZGE0MWg3OXJtNQ==" class="platform-btn" target="_blank" rel="noopener noreferrer" aria-label="Ver propiedades en Instagram" data-ga-event="cta_platform" data-ga-label="instagram">
-            <img src="assets/platforms/instagram.svg" alt="Instagram">
+          <a href="https://www.instagram.com/inmobiliaria.mediterraneo?igsh=MXF5ZGE0MWg3OXJtNQ==" class="prop-card prop-card--interior" target="_blank" rel="noopener noreferrer" data-ga-event="cta_platform" data-ga-label="instagram">
+            <h3>Instagram</h3>
+            <p>Descubre las últimas propiedades y novedades en nuestro Instagram.</p>
+            <span class="btn btn-primary">Ver en Instagram →</span>
           </a>
         </div>
       </div>
@@ -136,7 +142,7 @@
         </div>
 
         <div style="margin-top: 1.25rem;">
-          <a href="#contacto" class="btn btn-outline" data-ga-event="cta_about" data-ga-label="home_about">Hablar con nosotros</a>
+          <a href="#contacto" class="btn btn-primary" data-ga-event="cta_about" data-ga-label="home_about">Hablar con nosotros →</a>
         </div>
       </div>
     </section>
