@@ -99,7 +99,7 @@ function clearFieldError(input) {
   if (err) err.remove();
 }
 
-const CONTACT_FORM_ENDPOINT = 'https://formsubmit.co/ajax/mediterraneorealestate24@gmail.com';
+const CONTACT_FORM_ENDPOINT = 'https://formsubmit.co/ajax/cferrusmico@gmail.com';
 
 async function sendContactForm(form, fields, alertBox) {
   const submitBtn = form.querySelector('button[type="submit"]');
@@ -142,7 +142,7 @@ async function sendContactForm(form, fields, alertBox) {
   } catch {
     if (alertBox) {
       alertBox.textContent =
-        'No se pudo enviar el mensaje. Inténtalo de nuevo o escríbenos a mediterraneorealestate24@gmail.com.';
+        'No se pudo enviar el mensaje. Inténtalo de nuevo o escríbenos a cferrusmico@gmail.com.';
       alertBox.classList.add('is-visible');
     }
   } finally {
