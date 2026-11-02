@@ -1,116 +1,88 @@
-# Google Analytics, SEO y seguimiento
+# Cómo aparecer en Google
 
-Este documento explica qué está configurado y **cómo ver el rendimiento** de la web.
+La URL pública es: [https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/](https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/)
 
----
-
-## 1. Qué hay en el proyecto
-
-### Google Analytics 4 (GA4)
-- El código de GA4 está en **todas las páginas** (en el `<head>`).
-- Se registran **vistas de página** automáticamente.
-- Hay **eventos** en botones principales (hero y CTA de contacto) para medir clics.
-
-### SEO
-- **Canonical**: cada página tiene su URL canónica.
-- **Open Graph** (Facebook/LinkedIn): título, descripción e imagen por página.
-- **Twitter Card**: título y descripción para compartir en Twitter.
-- **JSON-LD**: en la home hay datos estructurados de tipo `RealEstateAgent` para Google.
-
-### Sitemap y robots
-- `sitemap.xml`: lista de las 5 URLs del sitio.
-- `robots.txt`: permite a los buscadores rastrear todo y apunta al sitemap.
+Google **no** posiciona la web solo por tener Analytics. Analytics mide visitas. **Search Console** es lo que usa Google para descubrir e indexar la URL. Para una inmobiliaria local, **Google Business Profile** (el perfil de Maps) suele traer más clics de “inmobiliaria Sueca” que la web sola.
 
 ---
 
-## 2. Pasos obligatorios antes de publicar
+## Ya está hecho en el código
 
-### A) Obtener tu ID de Google Analytics 4
+- **Google Analytics 4** en `index.html` y `contacto.html` (ID `G-HPLTVZCX7P`).
+- Títulos y descripciones con Sueca y Ribera Baixa.
+- Canonical, `robots.txt`, `sitemap.xml` y datos estructurados `RealEstateAgent`.
+- Imagen Open Graph de la casa del hero.
 
-1. Entra en [Google Analytics](https://analytics.google.com/) con tu cuenta Google.
-2. **Admin** (engranaje abajo a la izquierda) → **Crear propiedad**.
-3. Nombre de la propiedad: p. ej. "Mediterráneo Real Estate".
-4. Elige zona horaria e idioma y crea.
-5. Al configurar **flujo de datos**, elige **Web**.
-6. URL del sitio: tu dominio (ej. `https://www.mediterraneorealestate.com`).
-7. Copia el **ID de medición** (formato `G-XXXXXXXXXX`).
-
-Sustituye en **todos** los HTML:
-
-- Busca: `G-XXXXXXXXXX`
-- Reemplaza por: tu ID real (ej. `G-ABC123XYZ`).
-
-Archivos a tocar: `index.html`, `comprar.html`, `alquilar.html`, `contacto.html`, `valoracion.html` (en cada uno hay 2 apariciones del ID).
-
-### B) Poner tu dominio real
-
-En **todos** los archivos donde salga:
-
-- Busca: `https://SITE_URL`
-- Reemplaza por: tu URL real **con** `https://` (ej. `https://www.mediterraneorealestate.com`).
-
-Archivos:
-- Los HTML (canonical, `og:url`, `og:image`, `twitter`, y en `index.html` el JSON-LD).
-- `sitemap.xml`: en cada `<loc>` y en la URL del sitemap.
-- `robots.txt`: en la línea `Sitemap:`.
-
-Para `og:image` y redes sociales, lo ideal es una imagen de 1200×630 px (puedes usar tu logo sobre fondo o una foto de la oficina).
+Falta solo pegar la etiqueta de verificación cuando Search Console te la dé.
 
 ---
 
-## 3. Cómo ver el rendimiento (Google Analytics)
+## 1. Comprobar Analytics (no posiciona; sirve para medir)
 
-### Acceso
-- URL: [https://analytics.google.com](https://analytics.google.com)
-- Inicia sesión y elige la propiedad **Mediterráneo Real Estate**.
+1. Entra en [analytics.google.com](https://analytics.google.com) con la cuenta dueña de `G-HPLTVZCX7P`.
+2. Abre la propiedad **Mediterráneo Real Estate**.
+3. Ve a **Informes → Tiempo real**.
+4. Abre la web en otra pestaña.
 
-### Dónde mirar
-
-| Qué quieres ver | Dónde en GA4 |
-|-----------------|---------------|
-| **Visitas en tiempo real** | **Informes** → **Tiempo real**: usuarios ahora, página actual, origen. |
-| **Páginas más vistas** | **Informes** → **Participación** → **Páginas y pantallas**. |
-| **Usuarios totales y tendencia** | **Informes** → **Adquisición** → **Tráfico de usuarios por sesión** o **Resumen**. |
-| **De dónde vienen (redes, búsqueda, directo)** | **Informes** → **Adquisición** → **Adquisición de usuarios**. |
-| **Clics en “Contactar” y CTAs del hero** | **Informes** → **Participación** → **Eventos**. Busca eventos `cta_hero` y `cta_contact`. |
-| **Rendimiento en móvil vs escritorio** | **Informes** → **Audiencia** → **Información demográfica** / **Tecnología** (dispositivo). |
-
-Los datos pueden tardar **24–48 horas** en aparecer; **Tiempo real** funciona desde el primer día.
-
-### Eventos que ya se envían
-- `cta_hero` + etiqueta `ver_venta` o `ver_alquiler`: clic en los botones del hero (Inicio).
-- `cta_contact` + etiqueta según página (`section_cta`, `sobre_nosotros`, `comprar`, `alquilar`): clic en “Contactar” / “Ir a contacto” / “Solicitar información”.
-- `form_submit` + etiqueta `contacto`: envío del formulario de contacto.
-
-Para verlos: **Informes** → **Participación** → **Eventos** y activar/explorar por nombre de evento.
+Si ves **1 usuario**, el ID es correcto. Si no ves nada, crea una propiedad nueva (Admin → Crear propiedad → flujo **Web** → URL de Vercel), copia el `G-XXXXXXXXXX` y sustituye `G-HPLTVZCX7P` en `index.html` y `contacto.html`.
 
 ---
 
-## 4. Cómo ver el rendimiento SEO (Google Search Console)
+## 2. Google Search Console (obligatorio)
 
-1. Entra en [Google Search Console](https://search.google.com/search-console).
-2. Añade la **propiedad** con la URL de tu web (con o sin `www`, según uses una u otra).
-3. Verificación: opción **Etiqueta HTML** y copia el meta que te da Google (ej. `content="abc123..."`). Añade en el `<head>` de `index.html`:
+1. Abre [search.google.com/search-console](https://search.google.com/search-console).
+2. **Añadir propiedad**.
+3. Elige **Prefijo de URL** (no “Dominio”: esto es un subdominio de Vercel).
+4. Pega exactamente: `https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/`
+5. Verificación: **Etiqueta HTML**. Google muestra algo como:
    ```html
-   <meta name="google-site-verification" content="TU_CODIGO_AQUI">
+   <meta name="google-site-verification" content="abc123...">
    ```
-4. Cuando esté verificada la propiedad:
-   - **Rendimiento**: clics, impresiones y posición media en Google.
-   - **Cobertura**: páginas indexadas y errores.
-   - **Sitemaps**: envía `https://tu-dominio.com/sitemap.xml` en “Añadir un sitemap nuevo”.
+6. Pega esa etiqueta en el `<head>` de `index.html` (hay un comentario que lo indica) y vuelve a Search Console → **Verificar**.
+7. Cuando esté verificada:
+   - **Sitemaps** → añadir: `https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/sitemap.xml`
+   - **Inspección de URLs** → pega la home → **Solicitar indexación**. Repite con `/contacto.html`.
 
-Así ves cómo te encuentra la gente en Google y si las páginas se indexan bien.
+Las primeras impresiones suelen tardar de 2 a 14 días.
 
 ---
 
-## 5. Resumen rápido
+## 3. Google Business Profile (el paso que más impacto tiene)
 
-| Tarea | Dónde |
-|-------|--------|
-| Ver visitas y páginas | [analytics.google.com](https://analytics.google.com) → Informes |
-| Ver eventos (CTAs) | GA4 → Participación → Eventos |
-| Ver búsqueda Google (clics/impresiones) | [search.google.com/search-console](https://search.google.com/search-console) |
-| Cambiar ID de Analytics | Sustituir `G-XXXXXXXXXX` en los 5 HTML |
-| Cambiar dominio | Sustituir `https://SITE_URL` en HTML, `sitemap.xml` y `robots.txt` |
+Para “inmobiliaria Sueca” Google enseña sobre todo el **paquete de Maps**, no webs sueltas.
 
-Cuando tengas el ID de GA4 y el dominio real sustituidos, el análisis y el seguimiento quedarán activos en cuanto publiques la web.
+1. Entra en [business.google.com](https://business.google.com).
+2. Crea el perfil:
+   - Nombre: **Mediterráneo Real Estate**
+   - Categoría: **Agencia inmobiliaria**
+   - Ubicación: Sueca, Valencia (dirección si la hay; si no, negocio de zona de servicio: Sueca / Ribera Baixa)
+   - Teléfono y email iguales que en la web
+   - Web: `https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/`
+3. Verifica como pida Google (carta, teléfono o email).
+4. Añade horario (L–V 10:00–14:00 y 17:00–20:00, S 10:00–14:00), fotos y enlaces de Idealista e Instagram.
+
+Nombre, dirección y teléfono del perfil deben coincidir con el bloque de contacto de la web.
+
+---
+
+## 4. Consejos prácticos
+
+- Busca la marca + “Sueca” en Google (ventana de incógnito) cuando haya pasado una semana. Si no sale, vuelve a **Inspección de URLs**.
+- Sigue publicando en Idealista e Instagram (ya están en el schema `sameAs`).
+- Pide **reseñas de Google** en el Business Profile.
+- No compres enlaces ni envíes la web a directorios masivos.
+- Cuando haya dominio propio, se cambian canonical/sitemap y se pone una redirección 301 desde Vercel. Hasta entonces, se posiciona solo esta URL.
+
+---
+
+## Eventos de Analytics que ya se envían
+
+| Evento | Cuándo |
+|--------|--------|
+| `cta_hero` | Clic en Contacto del hero |
+| `cta_header` | Clic en Contacto del header |
+| `cta_platform` | Clic en Idealista o Instagram |
+| `cta_about` | Clic en “Hablar con nosotros” |
+| `lead_contact` / `form_submit` | Envío del formulario |
+
+En GA4: **Informes → Participación → Eventos**.
