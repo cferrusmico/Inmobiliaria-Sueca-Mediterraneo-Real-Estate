@@ -190,6 +190,39 @@ main {
   padding-left: 1.25rem;
 }
 
+.hero-copy h1,
+.hero-copy .subtitle,
+.hero-copy .btn {
+  animation: heroSlideIn 0.9s var(--ease-out) both;
+}
+
+.hero-copy .subtitle {
+  animation-delay: 0.14s;
+}
+
+.hero-copy .btn {
+  animation-delay: 0.28s;
+}
+
+@keyframes heroSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy h1,
+  .hero-copy .subtitle,
+  .hero-copy .btn {
+    animation: none;
+  }
+}
+
 @media (min-width: 768px) {
   .hero-copy {
     padding-left: 2.5rem;
@@ -537,11 +570,16 @@ main {
 }
 
 .contact-form {
-  background: #fff;
-  padding: 0;
-  border-radius: 0;
-  border: none;
+  background: #e8f2f4;
+  padding: 2rem 1.85rem;
+  border-radius: var(--radius-card);
+  border: 1px solid rgba(15, 111, 138, 0.10);
   box-shadow: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #fff;
 }
 
 /* Listings (Buy/Rent) */
