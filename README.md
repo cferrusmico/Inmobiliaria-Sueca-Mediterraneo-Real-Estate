@@ -1,38 +1,28 @@
-# Mediterráneo Real Estate — Web
+# Mediterráneo Real Estate
 
-Sitio web de la inmobiliaria **Mediterráneo Real Estate** (Sueca, Valencia).
+Sitio web de la inmobiliaria **Mediterráneo Real Estate** en Sueca (Valencia) y la Ribera Baixa. Es una web estática: presentación, enlaces a propiedades y un formulario de contacto.
 
-## Contenido
+**Sitio en línea:** [inmobiliaria-sueca-mediterraneo-rea.vercel.app](https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/)
 
-- **Inicio** (`index.html`) — Presentación y enlaces a comprar/alquilar
-- **Comprar** (`comprar.html`) — Propiedades en venta
-- **Alquilar** (`alquilar.html`) — Propiedades en alquiler
-- **Contacto** (`contacto.html`) — Datos de contacto y formulario
-- **Valoración** (`valoracion.html`) — Valoración por pasos (lead)
+Más detalle sobre el objetivo, la estructura y cómo se publica: [PROJECT_PLAN.md](PROJECT_PLAN.md).
 
-## Logo
+## Páginas
 
-Coloca el logo de Mediterráneo Real Estate en:
+- **Inicio** (`index.html`) — hero, sobre nosotros y contacto. Las propiedades se ven en [Idealista](https://www.idealista.com/pro/mediterraneo-real-estate/) e [Instagram](https://www.instagram.com/inmobiliaria.mediterraneo/).
+- **Contacto** (`contacto.html`) — datos de la oficina y el mismo formulario.
 
-```
-assets/logo.png
-```
+No hay catálogo de inmuebles en esta web: el listado vive en Idealista.
 
-Si tu logo tiene otro nombre, cambia la ruta en cada HTML donde aparece `src="assets/logo.png"`.
-
-## Cómo ver el sitio
-
-Abre `index.html` en el navegador o usa un servidor local, por ejemplo:
+## Cómo verlo en local
 
 ```bash
-# Con Python 3
 python3 -m http.server 8000
 ```
 
-Luego visita: http://localhost:8000
+Abre [http://localhost:8000](http://localhost:8000).
 
 ## Diseño
 
-- Paleta mediterránea premium: blanco, arena y azules suaves (acento)
-- Tipografías: Cormorant Garamond (títulos) y DM Sans (texto)
-- Diseño adaptable (responsive) y menú móvil
+- Paleta mediterránea: tinta `#1d1d1f`, acento `#0f6f8a` y arena
+- Tipografías: Newsreader (títulos) y Geist (texto)
+- Responsive, con menú móvil

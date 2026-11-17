@@ -99,7 +99,8 @@ function clearFieldError(input) {
   if (err) err.remove();
 }
 
-const CONTACT_FORM_ENDPOINT = 'https://formsubmit.co/ajax/cferrusmico@gmail.com';
+const CONTACT_FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+const CONTACT_FORM_ACCESS_KEY = '8581b240-d758-4d3d-872c-783e9d05d5b3';
 
 async function sendContactForm(form, fields, alertBox) {
   const submitBtn = form.querySelector('button[type="submit"]');
@@ -118,13 +119,12 @@ async function sendContactForm(form, fields, alertBox) {
         Accept: 'application/json',
       },
       body: JSON.stringify({
-        _subject: 'Nuevo mensaje desde la web — Mediterráneo Real Estate',
-        _template: 'table',
-        _captcha: 'false',
-        nombre: fields.nombre,
+        access_key: CONTACT_FORM_ACCESS_KEY,
+        subject: 'Nuevo mensaje desde la web — Mediterráneo Real Estate',
+        name: fields.nombre,
         email: fields.email,
-        telefono: fields.telefono,
-        mensaje: fields.mensaje,
+        phone: fields.telefono,
+        message: fields.mensaje,
         pagina: window.location.href,
       }),
     });
