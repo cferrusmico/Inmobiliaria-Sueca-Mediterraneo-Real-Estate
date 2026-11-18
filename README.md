@@ -1,28 +1,28 @@
 # Mediterráneo Real Estate
 
-Sitio web de la inmobiliaria **Mediterráneo Real Estate** en Sueca (Valencia) y la Ribera Baixa. Es una web estática: presentación, enlaces a propiedades y un formulario de contacto.
+Marketing site for **Mediterráneo Real Estate**, a local agency in Sueca (Valencia) and the Ribera Baixa. It is a static site: who they are, where to see listings, and how to get in touch.
 
-**Sitio en línea:** [mediterraneorealestate.vercel.app](https://mediterraneorealestate.vercel.app/)
+**Live site:** [mediterraneorealestate.vercel.app](https://mediterraneorealestate.vercel.app/)
 
-Más detalle sobre el objetivo, la estructura y cómo se publica: [PROJECT_PLAN.md](PROJECT_PLAN.md).
+The site language is Spanish. This README and [PROJECT_PLAN.md](PROJECT_PLAN.md) are in English so GitHub visitors can understand the project.
 
-## Páginas
+## Pages
 
-- **Inicio** (`index.html`) — hero, sobre nosotros y contacto. Las propiedades se ven en [Idealista](https://www.idealista.com/pro/mediterraneo-real-estate/) e [Instagram](https://www.instagram.com/inmobiliaria.mediterraneo/).
-- **Contacto** (`contacto.html`) — datos de la oficina y el mismo formulario.
+- **Home** (`index.html`) — hero, listings shortcuts, about, and the contact form
+- **Contact** (`contacto.html`) — office details and the same form, on its own URL
 
-No hay catálogo de inmuebles en esta web: el listado vive en Idealista.
+Listings are not stored here. Visitors open [Idealista](https://www.idealista.com/pro/mediterraneo-real-estate/) or [Instagram](https://www.instagram.com/inmobiliaria.mediterraneo/).
 
-## Cómo verlo en local
+## Run locally
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Abre [http://localhost:8000](http://localhost:8000).
+Then open [http://localhost:8000](http://localhost:8000).
 
-## Diseño
+## Design
 
-- Paleta mediterránea: tinta `#1d1d1f`, acento `#0f6f8a` y arena
-- Tipografías: Newsreader (títulos) y Geist (texto)
-- Responsive, con menú móvil
+- Ink `#1d1d1f`, Mediterranean teal `#0f6f8a`, sand accents
+- Newsreader for headings, Geist for body text
+- Responsive layout with a mobile menu
