@@ -1,6 +1,6 @@
 # Cómo aparecer en Google
 
-La URL pública es: [https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/](https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/)
+La URL pública es: [https://mediterraneorealestate.vercel.app/](https://mediterraneorealestate.vercel.app/)
 
 Google **no** posiciona la web solo por tener Analytics. Analytics mide visitas. **Search Console** es lo que usa Google para descubrir e indexar la URL. Para una inmobiliaria local, **Google Business Profile** (el perfil de Maps) suele traer más clics de “inmobiliaria Sueca” que la web sola.
 
@@ -33,14 +33,14 @@ Si ves **1 usuario**, el ID es correcto. Si no ves nada, crea una propiedad nuev
 1. Abre [search.google.com/search-console](https://search.google.com/search-console).
 2. **Añadir propiedad**.
 3. Elige **Prefijo de URL** (no “Dominio”: esto es un subdominio de Vercel).
-4. Pega exactamente: `https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/`
+4. Pega exactamente: `https://mediterraneorealestate.vercel.app/`
 5. Verificación: **Etiqueta HTML**. Google muestra algo como:
    ```html
    <meta name="google-site-verification" content="abc123...">
    ```
 6. Pega esa etiqueta en el `<head>` de `index.html` (hay un comentario que lo indica) y vuelve a Search Console → **Verificar**.
 7. Cuando esté verificada:
-   - **Sitemaps** → añadir: `https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/sitemap.xml`
+   - **Sitemaps** → añadir: `https://mediterraneorealestate.vercel.app/sitemap.xml`
    - **Inspección de URLs** → pega la home → **Solicitar indexación**. Repite con `/contacto.html`.
 
 Las primeras impresiones suelen tardar de 2 a 14 días.
@@ -57,7 +57,7 @@ Para “inmobiliaria Sueca” Google enseña sobre todo el **paquete de Maps**, 
    - Categoría: **Agencia inmobiliaria**
    - Ubicación: Sueca, Valencia (dirección si la hay; si no, negocio de zona de servicio: Sueca / Ribera Baixa)
    - Teléfono y email iguales que en la web
-   - Web: `https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/`
+   - Web: `https://mediterraneorealestate.vercel.app/`
 3. Verifica como pida Google (carta, teléfono o email).
 4. Añade horario (L–V 10:00–14:00 y 17:00–20:00, S 10:00–14:00), fotos y enlaces de Idealista e Instagram.
 

@@ -2,7 +2,7 @@
 
 Sitio web de la inmobiliaria **Mediterráneo Real Estate** en Sueca (Valencia) y la Ribera Baixa. Es una web estática: presentación, enlaces a propiedades y un formulario de contacto.
 
-**Sitio en línea:** [inmobiliaria-sueca-mediterraneo-rea.vercel.app](https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/)
+**Sitio en línea:** [mediterraneorealestate.vercel.app](https://mediterraneorealestate.vercel.app/)
 
 Más detalle sobre el objetivo, la estructura y cómo se publica: [PROJECT_PLAN.md](PROJECT_PLAN.md).
 

@@ -27,7 +27,7 @@ Que Mediterráneo Real Estate tenga una web clara en Sueca y la Ribera Baixa: qu
 
 1. Cambios en este repositorio.
 2. `git push origin main`.
-3. Vercel despliega y actualiza [la URL pública](https://inmobiliaria-sueca-mediterraneo-rea.vercel.app/).
+3. Vercel despliega y actualiza [la URL pública](https://mediterraneorealestate.vercel.app/).
 
 No hace falta un comando de Vercel en el ordenador.
 
